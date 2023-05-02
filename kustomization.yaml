@@ -1,9 +1,8 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
-bases:
-  - base
 
 resources:
-  - https://github.com/cert-manager/cert-manager/releases/download/v1.11.0/cert-manager.yaml
-  # - overlay/cert-manager-config.yaml
+- https://github.com/cert-manager/cert-manager/releases/download/v1.11.0/cert-manager.yaml
+- base
+
