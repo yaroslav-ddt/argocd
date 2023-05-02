@@ -11,6 +11,7 @@ resources:
 # - base/rollouts-extension.yaml
 - base/argocd-namespace.yaml
 - https://raw.githubusercontent.com/argoproj/argo-cd/master/manifests/install.yaml
+- https://github.com/cert-manager/cert-manager/releases/download/v1.11.0/cert-manager.yaml
 
 components:
 - https://github.com/argoproj-labs/argocd-extensions/manifests
