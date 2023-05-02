@@ -2,19 +2,10 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-- https://github.com/cert-manager/cert-manager/releases/download/v1.11.0/cert-manager.yaml
-#- overlay/cert-manager-config.yaml
-- base
-
-# #NGINX helm chart
-# helmChartInflationGenerator:
-# - chartName: ingress-nginx
-#   chartRepoUrl: https://github.com/kubernetes/ingress-nginx
-#   chartVersion: 4.6.0
-#   releaseName: ingress-nginx
-#   releaseNamespace: ingress
-#   # override with these custom values
-#   values: overlay/values.yaml
+  - https://github.com/cert-manager/cert-manager/releases/download/v1.11.0/cert-manager.yaml
+  - overlay/ingress-namespace.yaml
+  # - overlay/cert-manager-config.yaml
+  - base
 
 helmCharts:
 - name: ingress-nginx
@@ -29,3 +20,13 @@ helmCharts:
   releaseName: ingress-nginx
   version: 4.6.0
   repo: https://kubernetes.github.io/ingress-nginx
+
+# #NGINX helm chart
+# helmChartInflationGenerator:
+# - chartName: ingress-nginx
+#   chartRepoUrl: https://github.com/kubernetes/ingress-nginx
+#   chartVersion: 4.6.0
+#   releaseName: ingress-nginx
+#   releaseNamespace: ingress
+#   # override with these custom values
+#   values: overlay/values.yaml
