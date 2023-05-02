@@ -1,0 +1,7 @@
+# ## nginx configuration
+# ## Ref: https://github.com/kubernetes/ingress-nginx/blob/main/docs/user-guide/nginx-configuration/index.md
+# controller:
+#   replicaCount: 2
+#   service:
+#     enabled: true
+#     annotations: {service.beta.kubernetes.io/azure-load-balancer-health-probe-request-path: healthz}
