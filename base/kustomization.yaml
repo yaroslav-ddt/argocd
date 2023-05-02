@@ -5,7 +5,25 @@ namespace: argocd
 
 resources:
   - argocd-namespace.yaml
+  - ingress-namespace.yaml
+  - ingress-rule.yaml
+  - cert-manager-config.yaml
   - https://raw.githubusercontent.com/argoproj/argo-cd/master/manifests/install.yaml
 
 components:
   - https://github.com/argoproj-labs/argocd-extensions/manifests
+
+
+helmCharts:
+- name: ingress-nginx
+  namespace: ingress
+  includeCRDs: false
+  valuesInline:
+    controller:
+      replicaCount: 2
+      service:
+        enabled: true
+        annotations: {service.beta.kubernetes.io/azure-load-balancer-health-probe-request-path: healthz}
+  releaseName: ingress-nginx
+  version: 4.6.0
+  repo: https://kubernetes.github.io/ingress-nginx
