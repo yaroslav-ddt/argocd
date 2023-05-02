@@ -4,7 +4,6 @@ kind: Kustomization
 resources:
   - https://github.com/cert-manager/cert-manager/releases/download/v1.11.0/cert-manager.yaml
   - overlay/ingress-namespace.yaml
-  # - overlay/cert-manager-config.yaml
   - base
 
 helmCharts:
