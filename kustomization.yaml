@@ -9,6 +9,7 @@ resources:
 # - base/argo-cd-ui-ingress.yaml
 # - base/jenkins-ingress.yaml
 # - base/rollouts-extension.yaml
+- base/argocd-namespace.yaml
 - https://raw.githubusercontent.com/argoproj/argo-cd/master/manifests/install.yaml
 
 components:
