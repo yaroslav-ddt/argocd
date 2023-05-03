@@ -6,7 +6,7 @@ namespace: argocd
 secretGenerator:
 - name: argocd-secret
   envs:
-  - ../oidc.azure.clientSecret.env
+  - oidc.azure.clientSecret.env
 
 resources:
   - argocd-namespace.yaml
