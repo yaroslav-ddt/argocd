@@ -3,11 +3,11 @@ kind: Kustomization
 
 namespace: argocd
 
-secretGenerator:
-- name: argocd-secret
-  behavior: merge
-  envs:
-  - oidc.azure.clientSecret.env
+# secretGenerator:
+# - name: argocd-secret
+#   behavior: merge
+#   envs:
+#   - oidc.azure.clientSecret.env
 
 resources:
   - argocd-namespace.yaml
