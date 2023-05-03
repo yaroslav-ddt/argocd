@@ -9,6 +9,11 @@ secretGenerator:
   envs:
   - oidc.azure.clientSecret.env
 
+patchesStrategicMerge:
+  - argocd-cm-oidc.yaml
+  - argocd-rbac-cm.yaml
+
+
 resources:
   - argocd-namespace.yaml
   - https://raw.githubusercontent.com/argoproj/argo-cd/master/manifests/install.yaml
