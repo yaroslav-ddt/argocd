@@ -5,11 +5,9 @@ namespace: argocd
 
 resources:
   - argocd-namespace.yaml
-  - ingress-rule.yaml
-  - cert-manager-config.yaml
   - https://raw.githubusercontent.com/argoproj/argo-cd/master/manifests/install.yaml
+  - cert-manager-config.yaml
+  - ingress-rule.yaml
 
 components:
   - https://github.com/argoproj-labs/argocd-extensions/manifests
-
-
