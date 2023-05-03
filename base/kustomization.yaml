@@ -12,6 +12,7 @@ secretGenerator:
 resources:
   - argocd-namespace.yaml
   - https://raw.githubusercontent.com/argoproj/argo-cd/master/manifests/install.yaml
+  - argo-cd-application.yaml
   - cert-manager-config.yaml
   - ingress-rule.yaml
 
