@@ -5,6 +5,7 @@ namespace: argocd
 
 secretGenerator:
 - name: argocd-secret
+  behavior: merge
   envs:
   - oidc.azure.clientSecret.env
 
