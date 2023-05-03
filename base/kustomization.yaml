@@ -3,11 +3,18 @@ kind: Kustomization
 
 namespace: argocd
 
+secretGenerator:
+- name: argocd-secret
+  envs:
+  - ../../oidc.azure.clientSecret.env
+
 resources:
   - argocd-namespace.yaml
   - https://raw.githubusercontent.com/argoproj/argo-cd/master/manifests/install.yaml
   - cert-manager-config.yaml
   - ingress-rule.yaml
+  - argocd-cm-oidc.yaml
+  - argocd-rbac-cm.yaml
 
 components:
   - https://github.com/argoproj-labs/argocd-extensions/manifests
