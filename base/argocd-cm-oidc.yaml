@@ -4,7 +4,7 @@ data:
     name: Azure
     issuer: https://login.microsoftonline.com/703922c4-f042-4683-9e67-a969c8abc975/v2.0
     clientID: 4bd2642f-686e-42e2-bc13-20e8875435a5
-    clientSecret: $oidc.azure.clientSecret
+    clientSecret: $oidc-azure-clientSecret
     requestedScopes:
        - openid
        - email
