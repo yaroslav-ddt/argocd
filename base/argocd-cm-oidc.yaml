@@ -8,7 +8,7 @@ data:
     requestedScopes:
        - openid
        - email
-  url: https://argocd.crabdance.com/
+  url: https://argocdyy.crabdance.com/
 kind: ConfigMap
 metadata:
   labels:
