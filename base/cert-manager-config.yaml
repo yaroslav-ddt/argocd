@@ -5,7 +5,7 @@ metadata:
 spec:
   acme:
     # staging environment
-    server: https://acme-staging-v02.api.letsencrypt.org/directory #use https://acme-v02.api.letsencrypt.org/directory for production
+    server: https://acme-v02.api.letsencrypt.org/directory # staging https://acme-staging-v02.api.letsencrypt.org/directory #use https://acme-v02.api.letsencrypt.org/directory for production
     email: yaroslav@datainsights.de
     privateKeySecretRef:
       name: letsencrypt
